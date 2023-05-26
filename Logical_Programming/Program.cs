@@ -44,14 +44,7 @@
                     break;
 
                 case 5:
-                    int couponLength = 10; // Length of the coupon number
-
-                    // Generate a coupon number
-                    int length = Convert.ToInt32(Console.ReadLine());
-                    Coupon_Numbers.GenerateCoupon(length);
-
-                    Console.WriteLine("Coupon Number: " + couponLength );
-                    break; 
+                    
 
 
 
