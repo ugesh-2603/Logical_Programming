@@ -1,11 +1,13 @@
-﻿namespace Logical_Programming
+﻿using System.Diagnostics;
+
+namespace Logical_Programming
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Please Choose any one program from below option");
-            Console.WriteLine("1.FibonacciSeries\n2.PerfectNumber\n3.PrimeNumber\n4.Reverse_a_number\n5.Coupon_Number");
+            Console.WriteLine("1.FibonacciSeries\n2.PerfectNumber\n3.PrimeNumber\n4.Reverse_a_number\n5.Coupon_Number\n6.Stop_Watch");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -50,6 +52,10 @@
                     Console.WriteLine();
                     break;
 
+                case 6:
+                    Stop_Watch.stopwatch();
+                    Console.WriteLine();
+                    break;
 
 
 
