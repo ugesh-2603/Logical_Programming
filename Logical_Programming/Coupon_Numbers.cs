@@ -8,18 +8,47 @@ namespace Logical_Programming
 {
     internal class Coupon_Numbers
     {
-        //public static string GenerateCoupon(int length)
-        //{
-          //  Random random = new Random();
-           // const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            //char[] coupon = new char[length];
 
-            //for (int i = 0; i < length; i++)
-            //{
-             //   coupon[i] = chars[random.Next(chars.Length)];
-            //}
+        public static void coupon_number(int n)
+        {
+            int[] coupons = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                coupons[i] = -1; // Initialize with a non-valid value
+            }
 
-            //return new string(coupon);
+            Random random = new Random();
+            int distinctCoupons = 0;
+            int totalCoupons = 0;
+
+            int Limit = (int)Math.Pow(10, n.ToString().Length);
+            // This part of the code will allow our code to have Flexible Range.
+
+            while (distinctCoupons < n)
+            {
+                int newCoupon = random.Next(0, Limit); // Generate new coupon number
+                totalCoupons++;
+
+                if (!Contains(coupons, newCoupon))
+                {
+                    coupons[distinctCoupons] = newCoupon;
+                    distinctCoupons++;
+                }
+            }
+            Console.WriteLine("Total random numbers needed to generate for all distinct numbers: " + totalCoupons);
+
+        }
+        
+        static bool Contains(int[] arr, int value)
+        {
+            foreach (int num in arr)
+            {
+                if (num == value)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

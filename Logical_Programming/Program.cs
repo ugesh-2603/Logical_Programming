@@ -44,7 +44,12 @@
                     break;
 
                 case 5:
-                    
+                    Console.WriteLine("Please enter how many distinct Coupons want to generate?: "); 
+                    n = Convert.ToInt32(Console.ReadLine());
+                    Coupon_Numbers.coupon_number(n);
+                    Console.WriteLine();
+                    break;
+
 
 
 
