@@ -7,7 +7,7 @@ namespace Logical_Programming
         static void Main(string[] args)
         {
             Console.WriteLine("Please Choose any one program from below option");
-            Console.WriteLine("1.FibonacciSeries\n2.PerfectNumber\n3.PrimeNumber\n4.Reverse_a_number\n5.Coupon_Number\n6.Stop_Watch\n7.Vending_Machine\n8.DaysofWeek\n9.Temperature_Conversion\n10.Monthly_Payment");
+            Console.WriteLine("1.FibonacciSeries\n2.PerfectNumber\n3.PrimeNumber\n4.Reverse_a_number\n5.Coupon_Number\n6.Stop_Watch\n7.Vending_Machine\n8.DaysofWeek\n9.Temperature_Conversion\n10.Monthly_Payment\n11.SquareRoot\n12.BinaryConversion\n13.BinarySwapNibbles");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -123,6 +123,30 @@ namespace Logical_Programming
                    
                     Console.WriteLine();
                     break;
+
+                case 11:
+                    Console.WriteLine("Enter a Non-Negative number:");
+                    double i = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Square root: " + SquareRoot.Sqrt(i));
+                    Console.WriteLine();
+                    break;
+
+                case 12:
+                    Console.Write("Enter a decimal number (To Convert it into Binary): ");
+                    n = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Binary representation of the given decimal number: " + BinaryConversion.Binary(n));
+                    Console.WriteLine();
+                    break;
+
+                case 13:
+                    Console.Write("Enter a decimal number UNDER 256: ");
+                    n = int.Parse(Console.ReadLine());
+                    Console.WriteLine("After Swapping the Nibbles: " + BinaryConversion.Binary(n));
+                    Console.WriteLine("This Binary number in the Decimal is: " + BinaryConversion.Binary(n));
+                   
+                    Console.WriteLine();
+                    break;
+
 
 
 
