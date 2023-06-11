@@ -10,17 +10,17 @@ namespace Logical_Programming
     {
         public static double Sqrt(double i)
         {
-            if (i < 0)
+            if (i < 0) // Check if the input is a non-negative number
             {
                 Console.WriteLine("Input must be a non-negative number.");
             }
-            double epsilon = 1e-15;
+            double epsilon = 1e-15; // Define a small value for the calculation
             double t = i;
-            while (Math.Abs(t - i / t) > epsilon * t)
+            while (Math.Abs(t - i / t) > epsilon * t) // Perform an iterative calculation 
             {
-                t = (i / t + t) / 2.0;
+                t = (i / t + t) / 2.0;  // Update the value of 't' using the approximating square roots
             }
-            return t;
+            return t;  // Return the final rep of the square root
         }
     }
 }
