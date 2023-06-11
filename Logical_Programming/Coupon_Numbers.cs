@@ -11,7 +11,7 @@ namespace Logical_Programming
 
         public static void coupon_number(int n)
         {
-            int[] coupons = new int[n];
+            int[] coupons = new int[n];  // Create an array to store coupon numbers
             for (int i = 0; i < n; i++)
             {
                 coupons[i] = -1; // Initialize with a non-valid value
@@ -21,17 +21,17 @@ namespace Logical_Programming
             int distinctCoupons = 0;
             int totalCoupons = 0;
 
-            int Limit = (int)Math.Pow(10, n.ToString().Length);
-            // This part of the code will allow our code to have Flexible Range.
+            int Limit = (int)Math.Pow(10, n.ToString().Length); // The line calculates the limit value as 10 raised to the power of the number of digits in variable n.
+            
 
             while (distinctCoupons < n)
             {
-                int newCoupon = random.Next(0, Limit); // Generate new coupon number
+                int newCoupon = random.Next(0, Limit); // Generate a new coupon number between 0 and the upper limit
                 totalCoupons++;
 
-                if (!Contains(coupons, newCoupon))
+                if (!Contains(coupons, newCoupon)) // // Check if the new coupon number is already present in the array
                 {
-                    coupons[distinctCoupons] = newCoupon;
+                    coupons[distinctCoupons] = newCoupon; // // Store the new coupon number in the array
                     distinctCoupons++;
                 }
             }
@@ -43,12 +43,12 @@ namespace Logical_Programming
         {
             foreach (int num in arr)
             {
-                if (num == value)
+                if (num == value) // Check if the array contains the specified value
                 {
-                    return true;
+                    return true; // Return true if the value is found
                 }
             }
-            return false;
+            return false; // Return false if the value is not found
         }
     }
 }
